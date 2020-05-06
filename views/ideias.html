@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+
+{% set bodyid = "page-ideas" %}
+
+{% block title %}
+<title>Ideias - Casa Criativa</title>
+{% endblock %}
+
+{% block content %}
+
+    <div id="container">
+        <header>
+            <a href="/">
+                <img src="logo.png" alt="Imagem de logomarca" >
+            </a>
+            <nav>
+                <li><a href="/">Início</a></li>
+                <li><a href="#" onclick="onOff()">Nova ideia</a></li>
+            </nav>
+        </header>
+        <section id="title">
+            <p>em exibição</p>
+            <h1>Ideias</h1>
+        </section>
+    
+        <main>
+            <section id="ideias">
+                {% include "todasIdeias.html" %}
+                  
+            </section>
+        </main>
+    
+        <footer>
+            Desenvolvido por ❤ <a href="rocketseat.com.br">ViviRAMOS</a>
+        </footer>
+    
+    </div>
+
+ {% endblock %}
