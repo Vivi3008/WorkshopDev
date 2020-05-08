@@ -137,11 +137,32 @@ footer a{
     box-shadow: 0 4px 16px -8px rgba(1,1,1, 0.1);
 }
 
+
 .idea img{
     width: 60px;
     height: 60px;
 
     margin-right: 32px;
+}
+
+#links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 350px;
+    
+}
+#links a{
+  margin-bottom: 0;
+    
+}
+
+.idea .delete{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0;
+   
 }
 
 .idea h3{

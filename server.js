@@ -7,50 +7,7 @@ const server = express()
 server.use(express.urlencoded({extended:true}))
 
 const db = require('./db')
-/* const ideas = [
-{
-    title: "Balões de Água",
-    img: "water-balon.png",
-    category:"Brincadeiras",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perferendis molestias id quam voluptatem repellat pariatur, doloremque suscipit, earum iste quis hic! Itaque porro eveniet recusandae esse quis illum deleniti.",
-    url:"https://www.youtube.com/watch?v=epRA_uxxFB0"
-},
-{
-    title: "Acampamento em casa",
-    img: "indoor-camping.png",
-    category:"Brincadeiras",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perferendis molestias id quam voluptatem repellat pariatur, doloremque suscipit, earum iste quis hic! Itaque porro eveniet recusandae esse quis illum deleniti.",
-    url:"https://casavogue.globo.com/Interiores/Ambientes/noticia/2018/07/acampamento-na-sala-tudo-que-voce-precisa-saber-sobre-o-acampadentro.html"
-},
-{
-    title: "Treino em casa",
-    img: "sport.png",
-    category:"Saúde",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perferendis molestias id quam voluptatem repellat pariatur, doloremque suscipit, earum iste quis hic! Itaque porro eveniet recusandae esse quis illum deleniti.",
-    url:"https://www.youtube.com/watch?v=pZ1USShIrqY"
-},
-{
-    title: "Meditaçao",
-    img: "meditation.png",
-    category:"Saúde",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perferendis molestias id quam voluptatem repellat pariatur, doloremque suscipit, earum iste quis hic! Itaque porro eveniet recusandae esse quis illum deleniti.",
-    url:"https://www.youtube.com/watch?v=Iub-qQmNSYU"
-},
-{
-    title: "Cursos de Programação",
-    img: "coding.png",
-    category:"Educação",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perferendis molestias id quam voluptatem repellat pariatur, doloremque suscipit, earum iste quis hic! Itaque porro eveniet recusandae esse quis illum deleniti.",
-    url:"https://rocketseat.com.br"
-},
-{
-    title: "Leituras recomendadas",
-    img: "read.png",
-    category:"Hobby",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perferendis molestias id quam voluptatem repellat pariatur, doloremque suscipit, earum iste quis hic! Itaque porro eveniet recusandae esse quis illum deleniti.",
-    url:"https://www.culturagenial.com/dicas-livros/"
-}
-] */
+
 
 //configurar arquivos estáticos(css, scripts, imagens)
 server.use(express.static("public"))
@@ -132,5 +89,22 @@ server.post('/', function(req,res){
     
       })
 })
+
+//deletar uma ideia
+server.get('/del/:title',function(req,res){
+    
+    const title = req.params.title
+
+    db.run(`DELETE FROM Ideias WHERE title=?`,[title], function(err){
+        if (err) {
+             console.log(err)
+             return res.send("Erro de banco de dados")
+        }
+       
+    })
+    return res.redirect("/ideias")
+})
+ 
+
 //liguei meu servidor na porta 3000
 server.listen('3000')

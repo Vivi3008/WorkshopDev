@@ -48,9 +48,8 @@ db.serialize(function(){
 db.all(`SELECT * FROM Ideias`, function(err,rows){
      if (err) return console.log(err)
 
-    console.log(rows)
+  //  console.log(rows)
 })
-
 
 })
 

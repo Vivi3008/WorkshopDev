@@ -52,3 +52,4 @@ function checkFields(event){
       alert('Por favor, preencha todos os campos!')
     }
 }
+
