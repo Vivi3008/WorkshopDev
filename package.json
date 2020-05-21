@@ -1,14 +1,18 @@
 {
   "name": "workshopdev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto CasaCriativa desenvolvido durante o workshopdev da rocketseat, utilizando as tecnologias Node, Nunjucks(com páginas dinâmicas), Express, Sqlite e Nodemon. ",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vivi3008/WorkshopDev"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Viviane Ramos",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
