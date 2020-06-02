@@ -1,8 +1,6 @@
-# Welcome to e 👋
-[![Version](https://img.shields.io/npm/v/e.svg)](https://www.npmjs.com/package/e)
-[![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
+# Projeto Casa Criativa Feito durante WorkshopDev da Rocketseat
 
-> Projeto desenvolvido durante o workshopdev da rocketseat, utilizando as tecnologias Node, Nunjucks(com páginas dinâmicas), Express, Sqlite e Nodemon. 
+> Projeto desenvolvido durante o workshopdev da rocketseat, utilizando as tecnologias Node, Nunjucks(com páginas dinâmicas), Express, Sqlite e Nodemon. Adicionei a função de excluir uma ideia.
 
 ![layout-index.png](layout-index.png)
 
@@ -24,15 +22,8 @@
 
 ## Author
 
-👤 **ViviRamos**
+:woman_technologist: **ViviRamos** [*LinkedIn*](https://linkedin.com/in/viviane-ramos-luz-346169187)
 
 
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/viviane-ramos-luz-346169187](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/viviane-ramos-luz-346169187)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
