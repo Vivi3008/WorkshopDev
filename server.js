@@ -91,11 +91,11 @@ server.post('/', function(req,res){
 })
 
 //deletar uma ideia
-server.get('/del/:title',function(req,res){
+server.get('/del/:id',function(req,res){
     
-    const title = req.params.title
+    const id  = req.params.id
 
-    db.run(`DELETE FROM Ideias WHERE title=?`,[title], function(err){
+    db.run(`DELETE FROM Ideias WHERE id=?`,[id], function(err){
         if (err) {
              console.log(err)
              return res.send("Erro de banco de dados")
